@@ -1,5 +1,5 @@
 # IA2A Peru Bank Credit Risk Evaluation Competition
-Welcome to the IA2A Peru Bank Credit Risk Evaluation Competition repository. This project contains scripts and notebooks to preprocess data, train machine learning models, and generate predictions for the competition. The project includes two approaches: one using XGBoost and another using TensorFlow for more flexibility and control over the model architecture and hyperparameters.
+Welcome to the IA2A Peru Bank Credit Risk Evaluation Competition repository. This project contains notebooks for preprocessing data, training machine learning models, and generating predictions for the competition. The project includes two approaches: one using XGBoost and another using TensorFlow for more flexibility and control over the model architecture and hyperparameters.
 
 License: MIT License
 Author: Kevin Juan Román Rafaele
@@ -28,29 +28,46 @@ Ensure you have the following packages installed:
 - sqlite3
 
 You can install the required packages using:
-pip install pandas numpy scikit-learn xgboost tensorflow sqlite3
+```pip install pandas numpy scikit-learn xgboost tensorflow jupyter```
 
 ## Data Preprocessing
 The data preprocessing involves the following steps:
-1. Loading Data: The training and test datasets are loaded from CSV files.
-2. SQL Queries: Data manipulation is performed using SQL queries to handle missing values and preprocess the data.
-3. Encoding Categorical Variables: Categorical variables are encoded as numeric values.
-4. Feature Scaling: Features are scaled using StandardScaler.
+1. Loading data from CSV files.
+2. Handling values using SQL queries.
+3. Encoding categorical variables.
+4. Scaling numerical features.
 
 ## Model Training and Evaluation
 ### XGBoost Model
-The first approach uses XGBoost for training and evaluating the model in I2A2_Peru.ipynb. The steps include:
-1. Splitting the data into training and validation sets.
-2. Training an XGBoost model on the training set.
-3. Evaluating the model using Mean FBeta-Score.
-4. Generating predictions for the test set and preparing the submission file.
+The XGBoost model notebook (I2A2_Peru.ipynb) includes:
+1. Training an XGBoost model to determine feature importance.
+2. Selecting the top N important features.
+3. Training and evaluating the model using the selected features.
+4. Generating predictions and preparing the submission file.
 
 ### TensorFlow Model
-The second approach integrates XGBoost for feature importance and TensorFlow for training a neural network model in I2A2_Peru_tf.ipynb. The steps include:
-1. Using XGBoost to determine feature importance and selecting the top N features.
-2. Building and training a neural network using TensorFlow.
-3. Evaluating the model using Mean FBeta-Score.
-4. Generating predictions for the test set and preparing the submission file.
+The TensorFlow model notebook (I2A2_Peru_tf.ipynb) includes:
+1. Training an XGBoost model to determine feature importance.
+2. Selecting the top N important features.
+3. Building and training a neural network using TensorFlow.
+4. Evaluating the model's performance using Mean FBeta-Score.
+5. Generating predictions and preparing the submission file.
+
+## Usage
+To use the notebooks, follow these steps:
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/ia2a-peru-bank-credit-risk-evaluation.git
+cd ia2a-peru-bank-credit-risk-evaluation
+```
+2. Launch jupyter notebook:
+```
+jupyter notebook
+```
+3. Open the desired notebook (I2A2_Peru.ipynb or I2A2_Peru_tf.ipynb) and run the cells sequentially.
 
 ## Results
-The performance of the models is evaluated using the Mean FBeta-Score. The results will be printed in the console after running the scripts.
+The models' performances are evaluated using the Mean FBeta-Score. The results and the final submission files are generated within the notebooks. The submission scores from both models are around 0.55.
+
+## Contributing
+Contributions are welcome! If you have any improvements or suggestions, feel free to open an issue or submit a pull request.
