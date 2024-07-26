@@ -1,8 +1,10 @@
 # IA2A Peru Bank Credit Risk Evaluation Competition
 Welcome to the IA2A Peru Bank Credit Risk Evaluation Competition repository. This project contains notebooks for preprocessing data, training machine learning models, and generating predictions for the competition. The project includes two approaches: one using XGBoost and another using TensorFlow for more flexibility and control over the model architecture and hyperparameters.
 
-License: MIT License
-Author: Kevin Juan Román Rafaele
+- Name: Kevin Juan Román Rafaele
+- LinkedIn: https://www.linkedin.com/in/kevin-juan-r-997530117/
+- Email: mrredsky.2095@gmail.com
+- License: MIT License
 
 ## Table of Contents
 1. Project Overview
