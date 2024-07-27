@@ -64,7 +64,7 @@ cd ia2a-peru-bank-credit-risk-evaluation
 ```
 2. Launch jupyter notebook:
 ```
-jupyter notebook
+jupyter I2A2_Peru.ipynb
 ```
 3. Open the desired notebook (I2A2_Peru.ipynb or I2A2_Peru_tf.ipynb) and run the cells sequentially.
 
